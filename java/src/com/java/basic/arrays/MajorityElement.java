@@ -1,0 +1,40 @@
+// Find the Majority Element in an Array
+
+
+package com.java.basic.arrays;
+
+public class MajorityElement {
+
+    public static void main(String[] args){
+
+        int[] arr={1,2,4,2,2};
+        //int[] arr = {2, 2, 1, 2, 3, 2, 2};
+        int candidate=0;
+        int count=0;
+
+        for(int num:arr) {
+            if (count == 0) {
+                candidate = num;
+            }
+            if(num==candidate){
+                count ++;
+            }else{
+                count--;
+            }
+        }
+        count=0;
+        for(int num:arr) {
+            if (num == candidate) {
+                count++;
+
+            }
+        }
+            if(count>arr.length/2){
+                System.out.println("Majority Element:" +candidate);
+            }else{
+                System.out.println("No Majority Element found" );
+
+            }
+        }
+    }
+
