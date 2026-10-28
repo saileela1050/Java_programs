@@ -14,7 +14,7 @@ public class ArmStrongOrNot {
             sum=sum +digit * digit * digit;
 
             num=num/10;
-           // System.out.println(num);
+           //System.out.println(num);
 
         }
         if(sum==original){
